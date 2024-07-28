@@ -72,7 +72,7 @@ But it's otherwise a great (and did I mention _free_?) source of data.
 
 Hello. Testing...
 
-Checking VScode commit.
+Checking VScode committing.
 '''
 
 # Add some spacing
