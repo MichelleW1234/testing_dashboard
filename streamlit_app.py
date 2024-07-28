@@ -45,6 +45,11 @@ def get_gdp_data():
     # - GDP
     #
     # So let's pivot all those year-columns into two: Year and GDP
+
+    # MW: The melt function transforms data into a format 
+    #     that's easier to work with for analysis and visualization, 
+    #     where each row represents a single observation of a variable: ??????????????????????
+
     gdp_df = raw_gdp_df.melt(
         ['Country Code'],
         [str(x) for x in range(MIN_YEAR, MAX_YEAR + 1)],
@@ -100,14 +105,36 @@ if not len(countries):
     st.warning("Select at least one country")
 
 
+# MW: Creates a multi-select widget in a web application, allowing users to 
+#     choose one or more options from the countries list. 
+# MW: All the values that are selected go into the selected_countries list:
+
 selected_countries = st.multiselect(
     'Which countries would you like to view?',
     countries,
-    ['DEU', 'FRA', 'GBR', 'BRA', 'MEX', 'JPN'])
+    ['DEU', 'FRA', 'GBR', 'BRA', 'MEX', 'JPN']) # MW: Default list that will appear in widget
 
 ''
 ''
 ''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Filter the data
 filtered_gdp_df = gdp_df[
