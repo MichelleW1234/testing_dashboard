@@ -70,7 +70,7 @@ Browse GDP data from the [World Bank Open Data](https://data.worldbank.org/) web
 notice, the data only goes to 2022 right now, and datapoints for certain years are often missing.
 But it's otherwise a great (and did I mention _free_?) source of data.
 
-I've figured out what this does.
+MW: I've figured out what this does.
 '''
 
 # Add some spacing
