@@ -77,8 +77,10 @@ MW: I've figured out what this does.
 ''
 ''
 
-min_value = gdp_df['Year'].min()
-max_value = gdp_df['Year'].max()
+min_value = gdp_df['Year'].min()  # MW: Gets min year from csv file
+max_value = gdp_df['Year'].max()  # MW: Gets max year from csv file
+
+# MW: Creating a slider button that ranges from min year to max year:
 
 from_year, to_year = st.slider(
     'Which years are you interested in?',
@@ -86,10 +88,17 @@ from_year, to_year = st.slider(
     max_value=max_value,
     value=[min_value, max_value])
 
+
+# MW: Extracting the unique values from the 'Country Code' column of the gdp_df DataFrame and 
+#     assigning them to the countries variable (making it an array):
+
 countries = gdp_df['Country Code'].unique()
+
+# MW: If the countries list is empty, then one must select at least one country:
 
 if not len(countries):
     st.warning("Select at least one country")
+
 
 selected_countries = st.multiselect(
     'Which countries would you like to view?',
